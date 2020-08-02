@@ -1,13 +1,33 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/fenlei/fenlei",
+    "pages/fenlei_1/fenlei_1",
+    "pages/product_detail/product_detail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#ff6801",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#ff6801",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./assets/icon/index.png",
+      "selectedIconPath": "./assets/icon/index-select.png"
+      },{
+        "pagePath": "pages/fenlei/fenlei",
+        "text": "分类",
+        "iconPath": "./assets/icon/detail.png",
+        "selectedIconPath": "./assets/icon/detail-select.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
