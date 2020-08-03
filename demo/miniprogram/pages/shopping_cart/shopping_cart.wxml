@@ -1,0 +1,36 @@
+<checkbox-group bindchange="chance">
+  <block wx:for="{{product}}" wx:key="index">
+  <view class="product_list">
+    <view class="product_list_1">
+      <checkbox value="{{item._id}}"></checkbox>
+      <view class="product_list_3">
+        <image src="{{item.product_src}}" style="width:100rpx;height:100rpx"></image>
+        <view class="product_list_2">
+          <view style="dont-size:20px">{{item.product_name}}</view>
+          <view style="color:red">￥:{{item.product_price}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 商品数量模块 -->
+    <view class="product_list_4">
+      <image style="width:40rpx;height:40rpx" src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/jian.png"></image>
+      <view>{{item.product_num}}</view>
+      <image style="width:40rpx;height:40rpx" src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/add.png"></image>
+    </view>
+
+  </view>
+  <view class="line"></view>
+  </block>
+</checkbox-group>
+
+<!-- 按钮模块 -->
+<view class="btn">  
+  <button bindtap="delete" size="mini" type="warn" plain="true">删除</button>
+  <button open-type="contact" size="mini" type="primary">联系客服</button>
+  <view class="pay">
+    <view>结算</view>
+    <view>({{money}})</view>
+  </view>
+</view>
+

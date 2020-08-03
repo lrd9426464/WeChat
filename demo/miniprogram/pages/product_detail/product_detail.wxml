@@ -26,8 +26,8 @@
 
 <!-- 下单按钮 --> 
 <view class="pay">
-  <view class="pay_1">
+  <view class="pay_1" bindtap="into_shopping_cart">
     <image style="width:80rpx;height:80rpx" src="../../assets/icon/shopping.png"></image>
   </view>
-  <view class="pay_2">立即购买</view>
+  <view class="pay_2" bindtap="buy">立即购买</view>
 </view>
