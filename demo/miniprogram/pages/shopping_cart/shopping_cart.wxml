@@ -30,7 +30,7 @@
 <view class="btn">  
   <button bindtap="delete" size="mini" type="warn" plain="true">删除</button>
   <button open-type="contact" size="mini" type="primary">联系客服</button>
-  <view class="pay">
+  <view class="pay" bindtap="pay">
     <view>结算</view>
     <view>({{money}})</view>
   </view>

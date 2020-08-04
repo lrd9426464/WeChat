@@ -15,6 +15,28 @@ Page({
     delet_id:[]
   },
 
+  /* 支付事件 */
+  pay(){
+    db.collection('shopping_cart').where({
+      product_checked:"true"
+    }).get({
+      success:res=>{
+        console.log('获取商品成功',res)
+        if(res.data.length==0){
+          wx.showToast({
+            title: '你还未选择商品',
+            icon:"none"
+          })
+        }else{
+          wx.redirectTo({
+            url: '../pay/pay',
+          })
+        }
+      },fail:res=>{
+        console.log('获取商品失败',res)
+      }
+    })
+  },
   /* 计算金额 */
   get_money_sum(){
     let money_sum=0;
@@ -55,8 +77,16 @@ Page({
 
   /* 商品删除 */
   delete(){
+    console.log("触发delete事件")
+    /* db.collection('shopping_cart').where({
+      product_checked:"true"
+    }).remove({
+      success:res=>{
+        this.onLoad()
+      }
+    }) */
     wx.cloud.callFunction({
-      name:"product_delete",
+      name:"delete",
       success:res=>{
         console.log("删除商品成功",res)
         this.onLoad()
@@ -131,7 +161,7 @@ Page({
         this.setData({
           product:res.data
         })
-
+        this.get_money_sum()
       },fail:res=>{
         console.log('获取购物车商品失败',res);
       }

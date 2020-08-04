@@ -2,14 +2,16 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init({
-  evn:'demo-lrd'
+  env: 'demo-lrd'
 })
-const db = wx.cloud.database()
+const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
+  /* const ap=cloud.getWXContext() */
   try {
     return await db.collection('shopping_cart').where({
-      product_checked: "true"
+     /*  _openid:ap.OPENID, */
+     product_checked:"true"
     }).remove()
   } catch(e) {
     console.error(e)

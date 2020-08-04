@@ -14,12 +14,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //查看是否授权 
     wx.getSetting({
       success(res){
         if(res.authSetting['scope.userInfo']){
           //已经授权，可以直接调用getUserInfo获取头像昵称
           wx.getUserInfo({
             success:res=>{
+              console.log("1")
               console.log(res.userInfo)
             }
           })
@@ -27,7 +29,33 @@ Page({
       }
     })
   },
-
+  bindGetUserInfo(e){
+    console.log(e.detail.userInfo)
+  },
+  address(e){
+    wx.getSetting({
+      success(res){
+        if(res.authSetting['scope.address']){
+          wx.authorize({
+            scope: 'scope.address',
+            success(){
+              wx.chooseAddress({
+                success(result){
+                  console.log(result)
+                }
+              })
+            }
+          })
+        }else{
+          wx.openSetting({
+            success(res){
+              console.log(res.authSetting)
+            }
+          })
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -26,13 +26,11 @@
 </navigator>
 
 <!-- 收货地址 -->
-<navigator url="../my_address/my_address">
-  <view class="aq">
+  <view class="aq" bindtap="address">
     <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/address.png" style="height:60rpx;width:60rpx;margin-right:20rpx"></image>
     <view>收货地址</view>
     <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/rightsanjiao.png" style="height:60rpx;width:60rpx;margin-left:400rpx"></image>
   </view>
-</navigator>
 
 <!-- 商铺 -->
 <navigator url="../store_login/store_login">
