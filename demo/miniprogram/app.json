@@ -4,7 +4,12 @@
     "pages/fenlei/fenlei",
     "pages/fenlei_1/fenlei_1",
     "pages/product_detail/product_detail",
-    "pages/shopping_cart/shopping_cart"
+    "pages/shopping_cart/shopping_cart",
+    "pages/me/me",
+    "pages/my_record/my_record",
+    "pages/my_address/my_address",
+    "pages/store_operation/store_operation",
+    "pages/store_login/store_login"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -32,6 +37,11 @@
         "text": "购物车",
         "iconPath": "./assets/icon/shopping_cart.png",
         "selectedIconPath": "./assets/icon/shopping_cart_select.png"
+      },{
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./assets/icon/me.png",
+        "selectedIconPath": "./assets/icon/me-select.png"
       }
     ]
   },

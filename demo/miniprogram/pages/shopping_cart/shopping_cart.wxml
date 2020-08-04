@@ -1,8 +1,10 @@
-<checkbox-group bindchange="chance">
-  <block wx:for="{{product}}" wx:key="index">
+<block wx:for="{{product}}" wx:key="index">
   <view class="product_list">
     <view class="product_list_1">
-      <checkbox value="{{item._id}}"></checkbox>
+    <!-- 选组框，负责传递商品id -->
+      <checkbox-group bindchange="chance" data-id="{{item._id}}">
+        <checkbox value="{{item._id}}" checked="{{item.product_checked}}"></checkbox>
+      </checkbox-group>
       <view class="product_list_3">
         <image src="{{item.product_src}}" style="width:100rpx;height:100rpx"></image>
         <view class="product_list_2">
@@ -14,15 +16,15 @@
 
     <!-- 商品数量模块 -->
     <view class="product_list_4">
-      <image style="width:40rpx;height:40rpx" src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/jian.png"></image>
+      <image data-id="{{item._id}}" bindtap="product_jian" style="width:40rpx;height:40rpx" src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/jian.png" data-product_num="{{item.product_num}}"></image>
       <view>{{item.product_num}}</view>
-      <image style="width:40rpx;height:40rpx" src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/add.png"></image>
+      <image data-id="{{item._id}}" bindtap="product_jia" style="width:40rpx;height:40rpx" src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/add.png" data-product_num="{{item.product_num}}"></image>
     </view>
 
   </view>
   <view class="line"></view>
-  </block>
-</checkbox-group>
+</block>
+
 
 <!-- 按钮模块 -->
 <view class="btn">  

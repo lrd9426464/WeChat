@@ -1,0 +1,15 @@
+<view class="tongyi">
+  <form class="login" bindsubmit="formsubmit">
+    <view class="login_1">
+      <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/username.png" style="width:60rpx;height:60rpx;margin-right:20rpx"></image>
+      <input name="username" placeholder="请输入账号"></input>
+    </view>
+    <view class="line"></view>
+    <view class="login_1">
+      <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/upwd.png" style="width:60rpx;height:60rpx;margin-right:20rpx"></image>
+      <input name="upwd" placeholder="请输入密码" password="true"></input>
+    </view>
+    <view class="line"></view>
+    <button form-type="submit" style="background-color:#ff6801;color:#fff;margin-top:80rpx;">登录</button>
+  </form>
+</view>

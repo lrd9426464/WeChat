@@ -1,0 +1,29 @@
+.line{
+  width: 100%;
+  height: 5rpx;
+  background-color: #bebcbc;
+  margin-top: 10rpx;
+}
+.tongyi{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin-top: 400rpx;
+}
+.login_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
