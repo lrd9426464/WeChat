@@ -1,1 +1,42 @@
-/* pages/fenlei_1/fenlei_1.wxss */
+/* 排序列表 */
+.chance{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* 商品 */
+.product{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center;
+  background-color: snow;
+}
+.product_1{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img{
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 20rpx;
+}
+.product_2{
+  height: 60rpx;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid silver;
+  background-color: rgb(245,239,239);
+  border-radius: 50rpx;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10rpx;
+  margin: 10rpx 0 30rpx;
+}

@@ -1,4 +1,5 @@
 // pages/pay/pay.js
+const util=require('../../utils/util.js')
 const db=wx.cloud.database()
 
 Page({
@@ -24,15 +25,19 @@ Page({
   },
   /* 结算 */
   pay(){
-    if(this.data.name!==""&&this.data.address!==""&&this.data.phone!==""){
+    let that=this
+    var DATE=util.formatDate(new Date())
+    if(that.data.name!==""&&that.data.address!==""&&that.data.phone!==""){
       db.collection('order').add({
         data:{
-          name:this.data.name,
-          phone_number:this.data.phone_number,
-          address:this.data.address,
-          beizhu:this.data.beizhu,
-          money:this.data.money,
-          product:this.data.product
+          name:that.data.name,
+          phone_number:that.data.phone_number,
+          address:that.data.address,
+          beizhu:that.data.beizhu,
+          money:that.data.money,
+          product:that.data.product,
+          time:DATE,
+          product_state:"送货中"
         },success:function(res){
           console.log('下单成功',res)
           wx.cloud.callFunction({
@@ -40,6 +45,17 @@ Page({
             data:{},
             success:res=>{
               console.log('购物车删除成功',res)
+              for (let index = 0; index < that.data.product.length; index++) {
+                wx.cloud.callFunction({
+                  name:"inc_num",
+                  data:{
+                    product_id:that.data.product[index].product_id,
+                    product_num:that.data.product[index].product_num
+                  },success:res=>{
+                    console.log('商品销量自加成功',res)
+                  }
+                })
+              }
               wx.switchTab({
                 url: '../shopping_cart/shopping_cart',
               })

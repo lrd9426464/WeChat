@@ -5,7 +5,7 @@
   height: 700rpx;
   flex-direction: row;
   align-self: center;
-  margin-top: 30rpx;
+  padding-top: 10rpx;
 }
 .banner_1{
   width: 100%;

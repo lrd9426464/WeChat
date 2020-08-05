@@ -41,8 +41,8 @@
     <navigator class="product_1" url="../product_detail/product_detail?id={{item._id}}">
         <image src="{{item.src[0]}}" class="product_img"></image>
         <view class="product_2">
-          <text style="font-size:12px">{{item.name}}:￥{{item.price}}</text>
-          <text style="font-size:12px;font-weight:200">销量：{{item.num}}</text>
+          <text style="font-size:11px">{{item.name}}:￥{{item.price}}</text>
+          <text style="font-size:11px;font-weight:200">销量：{{item.num}}</text>
         </view>
       </navigator>
   </block>

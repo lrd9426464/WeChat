@@ -13,7 +13,8 @@
     "pages/pay/pay",
     "pages/store_operation_up/store_operation_up",
     "pages/store_operation_update/store_operation_update",
-    "pages/store_operation_gl/store_operation_gl"
+    "pages/store_operation_gl/store_operation_gl",
+    "pages/my_record_detail/my_record_detail"
 
   ],
   "window": {

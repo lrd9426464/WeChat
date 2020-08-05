@@ -1,18 +1,40 @@
 // pages/my_record/my_record.js
+const db=wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    order:[],
+    state:"送货中"
   },
 
+  chance(e){
+    let that=this;
+    console.log(e)
+    that.setData({
+      state:e.currentTarget.dataset.state
+    })
+    that.onLoad()
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that=this;
+    db.collection('order').where({
+      product_state:that.data.state
+    }).get({
+      success:res=>{
+        console.log('订单获取成功',res)
+        that.setData({
+          order:res.data
+        })
+      },fail:res=>{
+        console.log('订单获取失败',res)
+      }
+    })
   },
 
   /**
