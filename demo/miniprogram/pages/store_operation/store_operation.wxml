@@ -1,2 +1,18 @@
-<!--pages/store_operation/store_operation.wxml-->
-<text>pages/store_operation/store_operation.wxml</text>
+<view class="operation">
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_up/store_operation_up">
+    <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/shangchuan.png" style="width:100rpx;height:100rpx"></image>
+    <view>上传商品</view>
+  </view>
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_order/store_operation_order">
+    <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/order.png" style="width:100rpx;height:100rpx"></image>
+    <view>管理订单</view>
+  </view>
+  <view class="operation_1" bindtap="operation" data-page="../store_operation_gl/store_operation_gl">
+    <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/guanlishangpin.png" style="width:100rpx;height:100rpx"></image>
+    <view>管理商品</view>
+  </view>
+  <view class="operation_1">
+    <image src="cloud://demo-lrd.6465-demo-lrd-1302715603/img/tubiao/shangchuan.png" style="width:100rpx;height:100rpx"></image>
+    <view>上传商品</view>
+  </view>
+</view>

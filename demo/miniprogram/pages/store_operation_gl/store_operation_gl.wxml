@@ -1,0 +1,23 @@
+<block wx:for="{{product}}" wx:key="index">
+  <navigator url="../store_operation_update/store_operation_update?id={{item._id}}">
+    <view class="product_list">
+      <view class="product_list_1">
+      <!-- 选组框，负责传递商品id -->
+        <view class="product_list_3">
+          <image src="{{item.src[0]}}" style="width:100rpx;height:100rpx"></image>
+          <view class="product_list_2">
+            <view style="dont-size:20px">{{item.name}}</view>
+            <view style="color:red">￥:{{item.price}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 商品数量模块 -->
+      <view class="product_list_4">
+        <view>销量：{{item.num}}</view>
+      </view>
+
+    </view>
+    <view class="line"></view>
+  </navigator>
+</block>

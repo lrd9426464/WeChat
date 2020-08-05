@@ -65,7 +65,6 @@ Page({
     wx.getSetting({
       success(res){
         console.log(res)
-        if(res.authSetting['scope.address']){
           wx.authorize({
             scope: 'scope.address',
             success(){
@@ -81,13 +80,6 @@ Page({
               })
             }
           })
-        }else{
-          wx.openSetting({
-            success(res){
-              console.log(res.authSetting)
-            }
-          })
-        }
       }
     })
   },

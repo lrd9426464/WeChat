@@ -7,10 +7,10 @@ cloud.init({
 const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
-  /* const ap=cloud.getWXContext() */
+  const ap=cloud.getWXContext()
   try {
     return await db.collection('shopping_cart').where({
-     /*  _openid:ap.OPENID, */
+      _openid:ap.OPENID,
      product_checked:"true"
     }).remove()
   } catch(e) {

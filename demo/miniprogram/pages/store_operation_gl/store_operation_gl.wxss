@@ -1,0 +1,41 @@
+/* pages/store_operation_gl/store_operation_gl.wxss */
+.product_list{
+  display: flex;
+  flex-direction: row;
+  width: 96%;
+  height: 150rpx;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_list_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30rpx;
+}
+.product_list_2{
+  display: flex;
+  flex-direction:column;
+  margin-left: 20rpx;
+}
+.product_list_3{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+}
+.product_list_4{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+}
+.line{
+  width: 100%;
+  height: 5rpx;
+  background-color: rgb(136, 135, 135);
+  margin-bottom: 10rpx;
+}

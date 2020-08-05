@@ -1,1 +1,9 @@
-/* pages/store_operation/store_operation.wxss */
+.operation{
+  margin: 250rpx auto;
+}
+.operation_1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -92,7 +92,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    /* 产品列表 */
+    db.collection("product").get({
+      success:res=>{
+        // console.log('商品获取成功',res);
+        this.setData({
+          product:res.data
+        })
+      },
+      fail:res=>{
+        console.log('商品获取失败',res)
+      }
+    })
   },
 
   /**

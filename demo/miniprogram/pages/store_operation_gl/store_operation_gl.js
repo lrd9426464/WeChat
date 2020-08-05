@@ -1,24 +1,26 @@
-// pages/store_operation/store_operation.js
+// pages/store_operation_gl/store_operation_gl.js
+const db=wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    product:[]
   },
 
-  operation(e){
-    console.log(e)
-    wx.navigateTo({
-      url: e.currentTarget.dataset.page,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that=this
+    db.collection('product').get({
+      success:res=>{
+        that.setData({
+          product:res.data
+        })
+      }
+    })
   },
 
   /**

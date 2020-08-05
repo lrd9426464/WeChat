@@ -1,0 +1,35 @@
+page{
+  background-color: #E6E2E4;
+}
+.line{
+  width: 100%;
+  height: 5rpx;
+  background-color: rgb(136, 135, 135);
+  margin-bottom: 10rpx;
+}
+.upload{
+  width: 95%;
+  height: 400rpx;
+  padding: 30rpx;
+  margin: 20rpx auto;
+  background-color: #fff;
+  border-radius: 15rpx;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+.upload_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40rpx 0 10rpx;
+}
+.img{
+  width: 95%;
+  height: 200rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+.btn{
+  margin: 30rpx auto;
+}
