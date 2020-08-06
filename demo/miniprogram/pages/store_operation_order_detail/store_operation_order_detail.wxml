@@ -31,3 +31,6 @@
   <view>订单金额：{{order.money}}</view>
   <view>备注：{{order.beizhu}}</view>
 </view>
+
+<button bindtap="phone" type="primary" plain="true">拨打电话</button>
+<button bindtap="songda" type="primary">订单已送达</button>

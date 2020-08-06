@@ -6,7 +6,7 @@
 
 <!-- 订单栏 -->
 <block wx:for="{{order}}" wx:key="index">
-  <navigator url="../my_record_detail/my_record_detail?id={{item._id}}" class="order">
+  <navigator url="../store_operation_order_detail/store_operation_order_detail?id={{item._id}}" class="order">
     <view class="order_1">
       <view>{{item.time}}</view>
       <view>{{item.product_state}}</view>
@@ -20,3 +20,4 @@
     </view>
   </navigator>
 </block>
+

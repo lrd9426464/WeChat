@@ -11,7 +11,8 @@ Page({
     class:[],
     product:[],
     search:[],
-    list_display:true
+    list_display:true,
+    num:20
   },
 
   /* 搜索框search事件 */
@@ -131,7 +132,29 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let that=this
+    wx.showLoading({
+      title: '刷新中',
+      duration:1000
+    })
+    let old_data=this.data.product
+    db.collection('product').skip(that.data.num).get().then(res=>{
+      //利用concat函数连接新数据与旧数据
+      //并更新email_nums
+      that.setData({
+        product:old_data.concat(res.data),
+        num:that.data.num+20
+      })
+      if(res.data==""){
+        wx.showToast({
+          title: '已经加载完毕',
+          icon:"none"
+        })
+      }
+    }).catch(err=>{
+      console.error(err)
+    })
+    console.log('circle 下一页')
   },
 
   /**

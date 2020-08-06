@@ -10,14 +10,15 @@ page{
   display: flex;
   border: 1px solid slategray;
   border-radius: 40rpx;
-  padding-left: 40rpx;
-  padding-right: 40rpx;
+  padding: 0 40rpx;
   align-items: center;
   align-self: center;
   justify-content: space-between;
   background-color: white;
 }
-
+.search>input{
+  width: 85%;
+}
 /* 搜索列表 */
 .list{
   width: 88%;

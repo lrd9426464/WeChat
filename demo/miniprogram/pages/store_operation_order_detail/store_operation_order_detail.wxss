@@ -1,0 +1,41 @@
+page{
+  background-color: #E6E2E4;
+}
+.order_detail{
+  width: 95%;
+  height: 240rpx;
+  margin: 20rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+.order_detail_3{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30rpx 0;
+}
+.order_2{
+  width: 95%;
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  margin:0 auto 20rpx ;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.order_3>view{
+  margin: 20rpx 0 20rpx 40rpx;
+}
+.order_msg{
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+}

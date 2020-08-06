@@ -14,7 +14,9 @@
     "pages/store_operation_up/store_operation_up",
     "pages/store_operation_update/store_operation_update",
     "pages/store_operation_gl/store_operation_gl",
-    "pages/my_record_detail/my_record_detail"
+    "pages/my_record_detail/my_record_detail",
+    "pages/store_operation_order/store_operation_order",
+    "pages/store_operation_order_detail/store_operation_order_detail"
 
   ],
   "window": {
