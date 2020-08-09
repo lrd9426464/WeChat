@@ -76,6 +76,12 @@
 					"pathName": "pages/my_record/my_record",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pay/pay",
+					"pathName": "pages/pay/pay",
+					"scene": null
 				}
 			]
 		}

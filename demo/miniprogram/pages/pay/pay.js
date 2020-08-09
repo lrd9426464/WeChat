@@ -13,7 +13,8 @@ Page({
     name:"",
     phone_number:"",
     address:"",
-    beizhu:""
+    beizhu:"",
+    writing:false
   },
 
   /* 备注 */
