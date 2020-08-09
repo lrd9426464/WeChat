@@ -14,14 +14,22 @@ Page({
     phone_number:"",
     address:"",
     beizhu:"",
-    writing:false
+    time:""
   },
 
   /* 备注 */
   beizhu(e){
     console.log(e)
+    if(this.data.time!==""){
+      clearTimeout(this.data.time)
+    }
     this.setData({
-      beizhu:e.detail.value
+      time:setTimeout(()=>{
+        /* console.log("123") */
+        this.setData({
+          beizhu:e.detail.value
+        })
+      },500)
     })
   },
   /* 结算 */

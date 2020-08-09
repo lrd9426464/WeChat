@@ -33,7 +33,7 @@
 <!-- 备注 -->
 <view class="beizhu">
   <view>备注：</view>
-  <textarea placeholder="请输入备注" bindblur="beizhu"></textarea>
+  <textarea placeholder="请输入备注" bindinput="beizhu"></textarea>
 </view>
 
 <!-- 按钮 -->
