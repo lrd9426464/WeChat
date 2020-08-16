@@ -21,7 +21,6 @@ Page({
           //已经授权，可以直接调用getUserInfo获取头像昵称
           wx.getUserInfo({
             success:res=>{
-              console.log("1")
               console.log(res.userInfo)
             }
           })
